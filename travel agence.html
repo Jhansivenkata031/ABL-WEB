@@ -1,0 +1,417 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel With Us</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5faff;
+            color: #243447;
+        }
+
+        header {
+            background-color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        header h1 {
+            color: #087e8b;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #243447;
+            margin: 10px;
+        }
+
+        nav a:hover {
+            color: #087e8b;
+        }
+
+        .hero {
+            background: linear-gradient(
+                rgba(0, 50, 70, 0.55),
+                rgba(0, 50, 70, 0.55)
+            ), url("https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1400");
+
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 110px 20px;
+        }
+
+        .hero h2 {
+            font-size: 42px;
+            margin-bottom: 18px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #ff914d;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #e8752f;
+        }
+
+        section {
+            padding: 50px 8%;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 30px;
+            margin-bottom: 12px;
+            color: #087e8b;
+        }
+
+        .places {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px #dce7ee;
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card h3 {
+            margin: 15px 0 8px;
+        }
+
+        .card p {
+            padding: 0 12px 12px;
+            line-height: 1.6;
+        }
+
+        .price {
+            color: #e8752f;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .card .btn {
+            margin-bottom: 18px;
+        }
+
+        .packages {
+            background-color: #e8f7f8;
+        }
+
+        .itinerary {
+            background-color: white;
+            padding: 20px;
+            margin: 15px auto;
+            max-width: 650px;
+            border-left: 5px solid #087e8b;
+            border-radius: 8px;
+            text-align: left;
+            line-height: 1.8;
+        }
+
+        .inquiry {
+            background-color: #e8f7f8;
+        }
+
+        form {
+            max-width: 550px;
+            margin: 25px auto 0;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px #dce7ee;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccd8df;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        footer {
+            background-color: #12343b;
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+            line-height: 2;
+        }
+
+        @media (max-width: 800px) {
+            .places {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            header {
+                justify-content: center;
+            }
+
+            .hero h2 {
+                font-size: 32px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .places {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                text-align: center;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 6px;
+            }
+
+            .hero h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>✈ Travel With Us</h1>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#destinations">Destinations</a>
+            <a href="#packages">Packages</a>
+            <a href="#itinerary">Itinerary</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="hero" id="home">
+        <h2>Explore the World 🌍</h2>
+        <p>Discover beautiful places and create unforgettable memories.</p>
+        <a href="#destinations" class="btn">Explore Destinations</a>
+    </div>
+
+    <section id="destinations">
+        <h2>Popular Destinations</h2>
+        <p>Choose your next dream holiday!</p>
+
+        <div class="places">
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?w=600"
+                     alt="Taj Mahal in Agra">
+                <h3>Agra, India</h3>
+                <p>Explore the beautiful Taj Mahal and Indian history.</p>
+                <a href="#packages" class="btn">View Packages</a>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=600"
+                     alt="Green hills in Kerala">
+                <h3>Kerala, India</h3>
+                <p>Enjoy green hills, peaceful backwaters and nature.</p>
+                <a href="#packages" class="btn">View Packages</a>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?w=600"
+                     alt="Beautiful tropical beach">
+                <h3>Goa, India</h3>
+                <p>Relax on sunny beaches and enjoy coastal views.</p>
+                <a href="#packages" class="btn">View Packages</a>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=600"
+                     alt="Himalayan mountain landscape">
+                <h3>Manali, India</h3>
+                <p>Discover mountains, valleys and cool weather.</p>
+                <a href="#packages" class="btn">View Packages</a>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1548013146-72479768bada?w=600"
+                     alt="Historic Indian architecture">
+                <h3>Jaipur, India</h3>
+                <p>Visit royal palaces, forts and colourful markets.</p>
+                <a href="#packages" class="btn">View Packages</a>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=600"
+                     alt="Tropical island and blue ocean">
+                <h3>Maldives</h3>
+                <p>Enjoy turquoise waters and tropical island views.</p>
+                <a href="#packages" class="btn">View Packages</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="packages" id="packages">
+        <h2>Our Holiday Packages</h2>
+        <p>Affordable trips for your next vacation.</p>
+
+        <div class="places">
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=600"
+                     alt="Kerala holiday">
+                <h3>Kerala Tour</h3>
+                <p>Duration: 3 Days / 2 Nights</p>
+                <p class="price">₹5,999</p>
+                <a href="#contact" class="btn">Enquire Now</a>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?w=600"
+                     alt="Goa holiday">
+                <h3>Goa Beach Trip</h3>
+                <p>Duration: 4 Days / 3 Nights</p>
+                <p class="price">₹7,499</p>
+                <a href="#contact" class="btn">Enquire Now</a>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=600"
+                     alt="Manali mountain trip">
+                <h3>Manali Adventure</h3>
+                <p>Duration: 5 Days / 4 Nights</p>
+                <p class="price">₹9,999</p>
+                <a href="#contact" class="btn">Enquire Now</a>
+            </div>
+
+        </div>
+
+        <p style="margin-top: 20px;">
+            Note: Prices are sample prices for this student project.
+        </p>
+    </section>
+
+    <section id="itinerary">
+        <h2>Sample Trip Itinerary</h2>
+        <p>Here is a simple 3-day Kerala trip plan.</p>
+
+        <div class="itinerary">
+            <h3>Day 1 – Arrival</h3>
+            <p>Arrive in Kerala, check into your hotel and explore nearby places.</p>
+        </div>
+
+        <div class="itinerary">
+            <h3>Day 2 – Sightseeing</h3>
+            <p>Visit scenic viewpoints, local markets and beautiful backwaters.</p>
+        </div>
+
+        <div class="itinerary">
+            <h3>Day 3 – Departure</h3>
+            <p>Enjoy breakfast, shop for souvenirs and return home.</p>
+        </div>
+    </section>
+
+    <section class="inquiry" id="contact">
+        <h2>Plan Your Trip 🧳</h2>
+        <p>Fill out the form to tell us about your dream holiday.</p>
+
+        <form onsubmit="sendInquiry(event)">
+
+            <input type="text" id="name"
+                   placeholder="Your Full Name" required>
+
+            <input type="email" id="email"
+                   placeholder="Your Email Address" required>
+
+            <select id="destination" required>
+                <option value="">Choose a Destination</option>
+                <option>Kerala</option>
+                <option>Goa</option>
+                <option>Manali</option>
+                <option>Jaipur</option>
+                <option>Agra</option>
+                <option>Maldives</option>
+            </select>
+
+            <input type="number" id="people"
+                   placeholder="Number of Travellers"
+                   min="1" required>
+
+            <input type="date" id="date" required>
+
+            <textarea id="message"
+                      placeholder="Tell us about your travel plans"></textarea>
+
+            <button type="submit" class="btn">Submit Inquiry</button>
+
+        </form>
+    </section>
+
+    <footer>
+        <h2>✈ Travel With Us</h2>
+        <p>Your journey, our passion!</p>
+        <p>📍 Vijayawada, Andhra Pradesh, India</p>
+        <p>📞 +91 98765 43210</p>
+        <p>✉ travelwithus@example.com</p>
+        <p>© 2026 Travel With Us. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function sendInquiry(event) {
+            event.preventDefault();
+
+            let name = document.getElementById("name").value;
+            let destination = document.getElementById("destination").value;
+
+            alert("Thank you, " + name +
+                  "! Your inquiry for " + destination +
+                  " has been received in this demo.");
+
+            event.target.reset();
+        }
+    </script>
+
+</body>
+</html>
