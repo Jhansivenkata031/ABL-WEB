@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - Online Shopping</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f7fb;
+            color: #222;
+        }
+
+        header {
+            background-color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 8px #ddd;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #5b45e0;
+            margin-bottom: 10px;
+        }
+
+        header a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            margin: 10px;
+        }
+
+        header a:hover {
+            color: #5b45e0;
+        }
+
+        .hero {
+            background-color: #5b45e0;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            margin: 25px auto;
+            width: 90%;
+            border-radius: 15px;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            margin-bottom: 20px;
+        }
+
+        .shop-btn {
+            display: inline-block;
+            background-color: white;
+            color: #5b45e0;
+            padding: 12px 22px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .categories {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .categories h2 {
+            margin-bottom: 15px;
+        }
+
+        .category-btn {
+            display: inline-block;
+            background-color: white;
+            color: #222;
+            text-decoration: none;
+            padding: 10px 18px;
+            margin: 5px;
+            border-radius: 20px;
+        }
+
+        .category-btn:hover {
+            background-color: #5b45e0;
+            color: white;
+        }
+
+        .products-section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .products-section h2 {
+            margin: 25px 0 15px;
+        }
+
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .product-card {
+            background-color: white;
+            width: 250px;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px #ddd;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 4px 14px #bbb;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 170px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .discount {
+            color: green;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .product-card h3 {
+            margin: 8px 0;
+        }
+
+        .description {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        .rating {
+            color: orange;
+            margin-bottom: 8px;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .old-price {
+            font-size: 13px;
+            color: #999;
+            text-decoration: line-through;
+        }
+
+        .buy-btn {
+            display: block;
+            background-color: #5b45e0;
+            color: white;
+            padding: 10px;
+            border-radius: 8px;
+            text-decoration: none;
+        }
+
+        .buy-btn:hover {
+            background-color: #4030b5;
+        }
+
+        .benefits {
+            background-color: white;
+            padding: 30px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            text-align: center;
+        }
+
+        .benefits div {
+            width: 250px;
+        }
+
+        .benefits h3 {
+            margin: 8px 0;
+        }
+
+        .benefits p {
+            color: #777;
+            font-size: 14px;
+        }
+
+        footer {
+            background-color: #211c3c;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">TechStore.</div>
+
+        <a href="#products">Products</a>
+        <a href="#benefits">Services</a>
+        <a href="#contact">Contact</a>
+    </header>
+
+    <div class="hero">
+        <h1>Latest Tech, Bigger Savings!</h1>
+        <p>Discover amazing products at amazing prices. Find your favourites and shop today!</p>
+        <a href="#products" class="shop-btn">Shop Now →</a>
+    </div>
+
+    <div class="categories">
+        <h2>Shop by Category</h2>
+
+        <a href="#mobiles" class="category-btn">Mobiles</a>
+        <a href="#laptops" class="category-btn">Laptops</a>
+        <a href="#audio" class="category-btn">Audio</a>
+        <a href="#accessories" class="category-btn">Accessories</a>
+    </div>
+
+    <div class="products-section" id="products">
+
+        <h2 id="mobiles">📱 Mobiles</h2>
+        <div class="product-grid">
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500" alt="Smartphone">
+                <span class="discount">20% OFF</span>
+                <h3>Smartphone</h3>
+                <p class="description">Stylish smartphone with a brilliant display.</p>
+                <p class="rating">★★★★★ (4.8)</p>
+                <p class="price">₹15,999 <span class="old-price">₹19,999</span></p>
+                <a href="#contact" class="buy-btn">Buy Now</a>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=500" alt="Mobile phone">
+                <span class="discount">12% OFF</span>
+                <h3>Premium Phone</h3>
+                <p class="description">A sleek phone for everyday entertainment.</p>
+                <p class="rating">★★★★★ (4.7)</p>
+                <p class="price">₹21,999 <span class="old-price">₹24,999</span></p>
+                <a href="#contact" class="buy-btn">Buy Now</a>
+            </div>
+
+        </div>
+
+        <h2 id="laptops">💻 Laptops</h2>
+        <div class="product-grid">
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=500" alt="Laptop">
+                <span class="discount">15% OFF</span>
+                <h3>Power Laptop</h3>
+                <p class="description">A great laptop for study and everyday work.</p>
+                <p class="rating">★★★★★ (4.7)</p>
+                <p class="price">₹42,499 <span class="old-price">₹49,999</span></p>
+                <a href="#contact" class="buy-btn">Buy Now</a>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=500" alt="Laptop computer">
+                <span class="discount">18% OFF</span>
+                <h3>Student Laptop</h3>
+                <p class="description">A useful companion for college projects.</p>
+                <p class="rating">★★★★☆ (4.5)</p>
+                <p class="price">₹32,799 <span class="old-price">₹39,999</span></p>
+                <a href="#contact" class="buy-btn">Buy Now</a>
+            </div>
+
+        </div>
+
+        <h2 id="audio">🎧 Audio</h2>
+        <div class="product-grid">
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500" alt="Headphones">
+                <span class="discount">30% OFF</span>
+                <h3>Wireless Headphones</h3>
+                <p class="description">Enjoy your favourite music with clear sound.</p>
+                <p class="rating">★★★★☆ (4.5)</p>
+                <p class="price">₹1,399 <span class="old-price">₹1,999</span></p>
+                <a href="#contact" class="buy-btn">Buy Now</a>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?w=500" alt="Earbuds">
+                <span class="discount">20% OFF</span>
+                <h3>Wireless Earbuds</h3>
+                <p class="description">Compact earbuds for music on the go.</p>
+                <p class="rating">★★★★☆ (4.4)</p>
+                <p class="price">₹1,599 <span class="old-price">₹1,999</span></p>
+                <a href="#contact" class="buy-btn">Buy Now</a>
+            </div>
+
+        </div>
+
+        <h2 id="accessories">⌚ Accessories</h2>
+        <div class="product-grid">
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500" alt="Smart watch">
+                <span class="discount">25% OFF</span>
+                <h3>Smart Watch</h3>
+                <p class="description">A modern watch for your daily routine.</p>
+                <p class="rating">★★★★★ (4.6)</p>
+                <p class="price">₹2,249 <span class="old-price">₹2,999</span></p>
+                <a href="#contact" class="buy-btn">Buy Now</a>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1527814050087-3793815479db?w=500" alt="Computer mouse">
+                <span class="discount">10% OFF</span>
+                <h3>Wireless Mouse</h3>
+                <p class="description">Comfortable mouse for study and work.</p>
+                <p class="rating">★★★★☆ (4.3)</p>
+                <p class="price">₹899 <span class="old-price">₹999</span></p>
+                <a href="#contact" class="buy-btn">Buy Now</a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="benefits" id="benefits">
+        <div>
+            <h2>🚚</h2>
+            <h3>Free Delivery</h3>
+            <p>Enjoy free delivery on eligible orders.</p>
+        </div>
+
+        <div>
+            <h2>🔒</h2>
+            <h3>Secure Shopping</h3>
+            <p>Your shopping experience matters to us.</p>
+        </div>
+
+        <div>
+            <h2>💬</h2>
+            <h3>Customer Support</h3>
+            <p>We are here to help with your questions.</p>
+        </div>
+    </div>
+
+    <footer id="contact">
+        <h2>TechStore.</h2>
+        <p>Your favourite products, all in one place.</p>
+        <p>✉ techstore@example.com</p>
+        <p>© 2026 TechStore. Student project demonstration.</p>
+    </footer>
+
+</body>
+</html>

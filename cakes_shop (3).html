@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Bites Bakery</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff8f5;
+            color: #4b2922;
+        }
+
+        header {
+            background-color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            color: #c45d70;
+            margin-bottom: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #4b2922;
+            margin: 10px;
+        }
+
+        nav a:hover {
+            color: #e96b83;
+        }
+
+        .hero {
+            background-image: url("https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=1400");
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h2 {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #e96b83;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 20px;
+        }
+
+        .btn:hover {
+            background-color: #c84d68;
+        }
+
+        section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        section h2 {
+            color: #a64d5b;
+            margin-bottom: 10px;
+        }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .card {
+            background-color: white;
+            width: 250px;
+            padding: 12px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px #ddd;
+        }
+
+        .card img {
+            width: 100%;
+            height: 170px;
+            border-radius: 8px;
+        }
+
+        .card h3 {
+            margin: 10px 0;
+        }
+
+        .card p {
+            margin-bottom: 10px;
+        }
+
+        .price {
+            color: #d95770;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .custom {
+            background-color: #fde8e8;
+        }
+
+        .custom img {
+            width: 100%;
+            max-width: 450px;
+            height: 250px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .custom p {
+            margin-bottom: 10px;
+        }
+
+        .offers {
+            background-color: #fff0c9;
+        }
+
+        .offers p {
+            margin-bottom: 10px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .gallery img {
+            width: 300px;
+            height: 180px;
+            border-radius: 10px;
+        }
+
+        .contact {
+            background-color: #fde8e8;
+        }
+
+        .contact p {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #4b2922;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            line-height: 2;
+        }
+
+        @media (max-width: 600px) {
+            .hero h2 {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🧁 Sweet Bites</h1>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#custom">Custom Cakes</a>
+            <a href="#offers">Offers</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="hero" id="home">
+        <h2>Welcome to Sweet Bites! 🎂</h2>
+        <p>Fresh Cakes, Tasty Pastries and Sweet Memories.</p>
+        <a href="#products" class="btn">Explore Our Menu</a>
+    </div>
+
+    <section id="products">
+        <h2>Our Delicious Treats 🍰</h2>
+        <p>Freshly baked with love, just for you!</p>
+
+        <div class="products">
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=500" alt="Chocolate Cake">
+                <h3>Chocolate Cake</h3>
+                <p>Rich and delicious chocolate cake.</p>
+                <p class="price">₹499</p>
+                <a href="#contact" class="btn">Order Now</a>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=500" alt="Vanilla Cake">
+                <h3>Vanilla Cake</h3>
+                <p>Soft cake with creamy vanilla frosting.</p>
+                <p class="price">₹449</p>
+                <a href="#contact" class="btn">Order Now</a>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=500" alt="Fresh Pastries">
+                <h3>Pastries</h3>
+                <p>Fresh pastries for your sweet cravings.</p>
+                <p class="price">₹99</p>
+                <a href="#contact" class="btn">Order Now</a>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=500" alt="Cookies">
+                <h3>Chocolate Cookies</h3>
+                <p>Crispy cookies with chocolate chips.</p>
+                <p class="price">₹79</p>
+                <a href="#contact" class="btn">Order Now</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="custom" id="custom">
+        <h2>🎂 Custom Cake Designs</h2>
+
+        <img src="https://images.unsplash.com/photo-1535141192574-5d4897c12636?w=700" alt="Decorated birthday cake">
+
+        <p>Make your special moments even sweeter!</p>
+        <p>Choose your favourite flavour, colour and design.</p>
+
+        <br>
+        <a href="#contact" class="btn">Order Your Cake</a>
+    </section>
+
+    <section class="offers" id="offers">
+        <h2>🎉 Special Offers</h2>
+
+        <p>🍓 Enjoy 20% OFF on selected cakes!</p>
+        <p>🧁 Buy 2 pastries and get 1 free.</p>
+        <p>🎂 Special birthday cakes at affordable prices.</p>
+
+        <br>
+        <a href="#products" class="btn">View Products</a>
+    </section>
+
+    <section>
+        <h2>Our Sweet Gallery 📸</h2>
+        <p>A little sweetness in every picture!</p>
+
+        <div class="gallery">
+            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=500" alt="Chocolate cake">
+            <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=500" alt="Sweet dessert">
+            <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=500" alt="Fresh pastries">
+            <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=500" alt="Chocolate cookies">
+            <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=500" alt="Celebration cake">
+            <img src="https://images.unsplash.com/photo-1535141192574-5d4897c12636?w=500" alt="Custom birthday cake">
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Contact Our Bakery 💌</h2>
+
+        <p>📍 Main Road, Vijayawada, Andhra Pradesh</p>
+        <p>📞 +91 98765 43210</p>
+        <p>✉ sweetbites@example.com</p>
+        <p>🕒 Opening Hours: 9 AM – 9 PM</p>
+
+        <br>
+        <a href="mailto:sweetbites@example.com" class="btn">Contact Us</a>
+    </section>
+
+    <footer>
+        <h2>🧁 Sweet Bites Bakery</h2>
+        <p>Freshly Baked, Always Special!</p>
+        <p>© 2026 Sweet Bites. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
